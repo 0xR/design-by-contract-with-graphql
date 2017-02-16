@@ -1,0 +1,38 @@
+{
+  "name": "design-by-contract-with-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./development/run-src-server.js",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "demo:validator:error": "echo '{\"asdf\":4 }' | node ./development/validator.js",
+    "demo:validator": "cat ./development/search_result.json | node ./development/validator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "casual": "^1.5.9",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "graphql": "^0.9.1",
+    "graphql-compose": "^1.12.0",
+    "graphql-custom-types": "^0.7.1",
+    "graphql-server-koa": "^0.5.2",
+    "graphql-tools": "^0.9.2",
+    "koa": "2",
+    "koa-bodyparser": "^2.3.0",
+    "koa-router": "^7.1.0",
+    "nodemon": "^1.11.0"
+  }
+}
