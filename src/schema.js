@@ -3,12 +3,12 @@ import casual from 'casual';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
-const schema = [
+const typeDefs = [
   readFileSync(resolve(__dirname, 'schema.graphql')).toString(),
 ];
 
 const executableSchema = makeExecutableSchema({
-  typeDefs: schema,
+  typeDefs,
 });
 
 addMockFunctionsToSchema({

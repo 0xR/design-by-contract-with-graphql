@@ -12,7 +12,7 @@ Browse to http://localhost:3000/graphiql
 Example query:
 ```graphql
 query {
-  search(query: "bank", offset: 4, limit:4) {
+  search(query: "jeans", offset: 4, limit:4) {
     total
     results {
       id
