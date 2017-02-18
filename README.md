@@ -39,3 +39,11 @@ cat ./development/search_result.json | node ./development/validator.js
 npm demo:validator
 
 ```
+
+### Mock data client
+An example client is availabe at [src/client.js](src/client.js).
+
+```sh
+# Run the client
+npm run run demo:client
+```
