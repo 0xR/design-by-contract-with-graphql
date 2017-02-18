@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./development/run.js src/server.js",
+    "start": "nodemon ./development/run src/server",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "demo:validator:error": "echo '{\"asdf\":4 }' | node ./development/run.js src/validator",
-    "demo:validator": "cat ./development/search_result.json | node ./development/run.js src/validator",
-    "demo:client": "node ./development/run.js src/client.js"
+    "demo:validator:error": "echo '{\"asdf\":4 }' | node ./development/run src/validator",
+    "demo:validator": "cat ./development/search_result.json | node ./development/run src/validator",
+    "demo:client": "node ./development/run src/client"
   },
   "author": "",
   "license": "ISC",

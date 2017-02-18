@@ -27,13 +27,13 @@ query {
 ### Search result json validator
 ```sh
 # Get some validation errors
-echo '{"asdf":4 }' | node ./development/validator.js
+echo '{"asdf":4 }' | node ./development/run src/validator
 
 # Also available as
 npm demo:validator:error
 
 # Try a valid search result
-cat ./development/search_result.json | node ./development/validator.js
+cat ./development/search_result.json | node ./development/run src/validator
 
 # Also available as
 npm demo:validator
