@@ -1,23 +1,15 @@
-import Koa from 'koa';
-import KoaRouter from 'koa-router';
-import koaBody from 'koa-bodyparser';
-import { graphqlKoa, graphiqlKoa } from 'graphql-server-koa';
+import express from 'express';
+import bodyParser from 'body-parser';
+import { graphqlExpress, graphiqlExpress } from 'graphql-server-express';
 import schema from './schema';
 
-const app = new Koa();
-const router = new KoaRouter();
 const PORT = 3000;
 
-// koaBody is needed just for POST.
-app.use(koaBody());
+const app = express();
 
-router.post('/graphql', graphqlKoa({ schema }));
-router.get('/graphql', graphqlKoa({ schema }));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
+app.get('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
-router.get('/graphiql', graphiqlKoa({ endpointURL: '/graphql' }));
-
-app.use(router.routes());
-app.use(router.allowedMethods());
 app.listen(PORT, () => {
   /* eslint-disable no-console */
   console.log('Listening on:');
@@ -25,4 +17,3 @@ app.listen(PORT, () => {
   console.log(`http://localhost:${PORT}/graphql`);
   /* eslint-enable no-console */
 });
-
