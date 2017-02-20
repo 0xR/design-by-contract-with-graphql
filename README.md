@@ -30,13 +30,13 @@ query {
 echo '{"asdf":4 }' | node ./development/run src/validator
 
 # Also available as
-npm demo:validator:error
+npm run demo:validator:error
 
 # Try a valid search result
 cat ./development/search_result.json | node ./development/run src/validator
 
 # Also available as
-npm demo:validator
+npm run demo:validator
 
 ```
 
