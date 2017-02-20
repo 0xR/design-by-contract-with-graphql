@@ -24,7 +24,7 @@ query {
 }
 ```
 
-### Search result json validator
+### Search result JSON validator
 ```sh
 # Get some validation errors
 echo '{"asdf":4 }' | node ./development/run src/validator
